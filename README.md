@@ -27,3 +27,4 @@ pnpm install --save @myty/stage3
 ```bash
 import "https://deno.land/x/stage3/mod.ts";
 import "https://deno.land/x/stage3/promise-with-resolvers.ts";
+```
