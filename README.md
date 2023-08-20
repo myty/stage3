@@ -28,3 +28,18 @@ pnpm install --save @myty/stage3
 import "https://deno.land/x/stage3/mod.ts";
 import "https://deno.land/x/stage3/promise-with-resolvers.ts";
 ```
+
+### Usage
+
+```ts
+// Arrange
+const resolvedValue = 5;
+const { resolve, promise } = Promise.withResolvers<number>();
+
+// Act
+setTimeout(() => resolve(resolvedValue), 10);
+const result = await promise;
+
+// Assert
+assertEquals(result, resolvedValue);
+```

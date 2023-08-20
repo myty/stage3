@@ -70,3 +70,16 @@ Deno.test(async function rejectsPromiseWithoutResult() {
   // Assert
   assertEquals(result, undefined);
 });
+
+Deno.test(async function resolvesPromiseWithResultAfterTimeout() {
+  // Arrange
+  const resolvedValue = 5;
+  const { resolve, promise } = Promise.withResolvers<number>();
+
+  // Act
+  setTimeout(() => resolve(resolvedValue), 250);
+  const result = await promise;
+
+  // Assert
+  assertEquals(result, resolvedValue);
+});
