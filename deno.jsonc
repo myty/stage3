@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "build": "deno run -A scripts/build_npm.ts"
+  }
+}
