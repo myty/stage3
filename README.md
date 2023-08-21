@@ -32,6 +32,10 @@ import "https://deno.land/x/stage3/promise-with-resolvers.ts";
 ### Usage
 
 ```ts
+import "@myty/stage3/script/promise-with-resolvers"; // Node.js (commonjs)
+import "@myty/stage3/esm/promise-with-resolvers"; // Node.js (module)
+import "https://deno.land/x/stage3/promise-with-resolvers.ts"; // Deno
+
 // Arrange
 const resolvedValue = 5;
 const { resolve, promise } = Promise.withResolvers<number>();
